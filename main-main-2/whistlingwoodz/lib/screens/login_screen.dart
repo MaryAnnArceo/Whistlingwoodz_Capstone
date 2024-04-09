@@ -62,10 +62,17 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Fix for pixel exceeding screen.
-      resizeToAvoidBottomInset: false,
-      backgroundColor: colorPrimary,
-      body: SafeArea(
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        // backgound photo for landing page
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/background1.png"),
+            opacity: 0.8,
+            fit: BoxFit.cover,
+          ),
+        ),
         child: Column(
           children: [
             Row(
@@ -140,7 +147,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         // WhistlingWoodz Name
                         const Text(
-                          "WhistlingWoodz",
+                          "",
                           style: TextStyle(
                             color: colorWhite,
                             fontSize: 25.0,
@@ -155,7 +162,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     // Welcome back! BOLD
                     const Text(
-                      "Welcome back !",
+                      "",
                       style: TextStyle(
                         color: colorWhite,
                         fontSize: 25.0,
@@ -171,7 +178,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Visibility(
                       visible: widget.error,
                       replacement: const Text(
-                        "Please enter your details below",
+                        "",
                         style: TextStyle(
                           color: colorWhite,
                           fontSize: 14.0,
