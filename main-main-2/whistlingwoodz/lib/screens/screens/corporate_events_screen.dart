@@ -103,7 +103,11 @@ class _CorporateState extends State<CorporateForm> {
     "Park Hyatt Melbourne",
     "Hyatt Centric Melbourne",
     "The Langham Melbourne",
-    "Other"
+    "Rajasthan",
+    "Missouri",
+    "Bangalore",
+    "Kerala",
+    "Other",
   ];
   final List<String> _budgetList = [
     r"$20,000 - $29,999",
@@ -128,7 +132,7 @@ class _CorporateState extends State<CorporateForm> {
         // backgound photo for landing page
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/corporatePage.png"),
+            image: AssetImage("assets/images/back2.png"),
             opacity: 0.6,
             fit: BoxFit.cover,
           ),
@@ -262,247 +266,247 @@ class _CorporateState extends State<CorporateForm> {
 
   // Theme drop down menu
   Widget _buildTheme() => DropdownButtonFormField(
-        value: _selectedTheme,
-        items: _themeList
-            .map(
-              (e) => DropdownMenuItem(
-                value: e,
-                child: Text(e),
-              ),
-            )
-            .toList(),
-        onChanged: (value) {
-          setState(() {
-            _selectedTheme = value as String;
-          });
-        },
-        icon: const Icon(
-          Icons.arrow_drop_down_circle,
-          size: 20,
-          color: Colors.deepOrangeAccent,
+    value: _selectedTheme,
+    items: _themeList
+        .map(
+          (e) => DropdownMenuItem(
+        value: e,
+        child: Text(e),
+      ),
+    )
+        .toList(),
+    onChanged: (value) {
+      setState(() {
+        _selectedTheme = value as String;
+      });
+    },
+    icon: const Icon(
+      Icons.arrow_drop_down_circle,
+      size: 20,
+      color: Colors.deepOrangeAccent,
+    ),
+    dropdownColor: Colors.yellow.shade50,
+    decoration: const InputDecoration(
+      labelText: "Select Theme*",
+      prefixIcon: Icon(
+        Icons.subject,
+        color: Colors.deepOrangeAccent,
+      ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(10),
         ),
-        dropdownColor: Colors.yellow.shade50,
-        decoration: const InputDecoration(
-          labelText: "Select Theme*",
-          prefixIcon: Icon(
-            Icons.subject,
-            color: Colors.deepOrangeAccent,
-          ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(10),
-            ),
-          ),
-        ),
-      );
+      ),
+    ),
+  );
 
   // Functions drop down menu
   Widget _buildFunction() => DropdownButtonFormField(
-        value: _selectedFunction,
-        items: _functionList
-            .map(
-              (e) => DropdownMenuItem(
-                value: e,
-                child: Text(e),
-              ),
-            )
-            .toList(),
-        onChanged: (value) {
-          setState(() {
-            _selectedFunction = value as String;
-          });
-        },
-        icon: const Icon(
-          Icons.arrow_drop_down_circle,
-          size: 20,
-          color: Colors.deepOrangeAccent,
+    value: _selectedFunction,
+    items: _functionList
+        .map(
+          (e) => DropdownMenuItem(
+        value: e,
+        child: Text(e),
+      ),
+    )
+        .toList(),
+    onChanged: (value) {
+      setState(() {
+        _selectedFunction = value as String;
+      });
+    },
+    icon: const Icon(
+      Icons.arrow_drop_down_circle,
+      size: 20,
+      color: Colors.deepOrangeAccent,
+    ),
+    dropdownColor: Colors.yellow.shade50,
+    decoration: const InputDecoration(
+      labelText: "Select Functions*",
+      prefixIcon: Icon(
+        Icons.book_online,
+        color: Colors.deepOrangeAccent,
+      ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(10),
         ),
-        dropdownColor: Colors.yellow.shade50,
-        decoration: const InputDecoration(
-          labelText: "Select Functions*",
-          prefixIcon: Icon(
-            Icons.book_online,
-            color: Colors.deepOrangeAccent,
-          ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(10),
-            ),
-          ),
-        ),
-      );
+      ),
+    ),
+  );
 
   // Venue drop down menu
   Widget _buildVenue() => DropdownButtonFormField(
-        value: _selectedVenue,
-        items: _venueList
-            .map(
-              (e) => DropdownMenuItem(
-                value: e,
-                child: Text(e),
-              ),
-            )
-            .toList(),
-        onChanged: (value) {
-          setState(() {
-            _selectedVenue = value as String;
-          });
-        },
-        icon: const Icon(
-          Icons.arrow_drop_down_circle,
-          size: 20,
-          color: Colors.deepOrangeAccent,
+    value: _selectedVenue,
+    items: _venueList
+        .map(
+          (e) => DropdownMenuItem(
+        value: e,
+        child: Text(e),
+      ),
+    )
+        .toList(),
+    onChanged: (value) {
+      setState(() {
+        _selectedVenue = value as String;
+      });
+    },
+    icon: const Icon(
+      Icons.arrow_drop_down_circle,
+      size: 20,
+      color: Colors.deepOrangeAccent,
+    ),
+    dropdownColor: Colors.yellow.shade50,
+    decoration: const InputDecoration(
+      labelText: "Select Venue*",
+      prefixIcon: Icon(
+        Icons.place,
+        color: Colors.deepOrangeAccent,
+      ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(10),
         ),
-        dropdownColor: Colors.yellow.shade50,
-        decoration: const InputDecoration(
-          labelText: "Select Venue*",
-          prefixIcon: Icon(
-            Icons.place,
-            color: Colors.deepOrangeAccent,
-          ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(10),
-            ),
-          ),
-        ),
-      );
+      ),
+    ),
+  );
 
   // guest text form field
   Widget _buildGuest() => TextFormField(
-        controller: guestNoController,
-        autofocus: false,
-        keyboardType: TextInputType.number,
-        decoration: const InputDecoration(
-          labelText: "Number of Guests*",
-          prefixIcon: Icon(
-            Icons.group,
-            color: Colors.deepOrangeAccent,
-          ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(10),
-            ),
-          ),
+    controller: guestNoController,
+    autofocus: false,
+    keyboardType: TextInputType.number,
+    decoration: const InputDecoration(
+      labelText: "Number of Guests*",
+      prefixIcon: Icon(
+        Icons.group,
+        color: Colors.deepOrangeAccent,
+      ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(10),
         ),
-      );
+      ),
+    ),
+  );
 
   // Budget drop down menu
   Widget _buildBudget() => DropdownButtonFormField(
-        value: _selectedBudget,
-        items: _budgetList
-            .map(
-              (e) => DropdownMenuItem(
-                value: e,
-                child: Text(e),
-              ),
-            )
-            .toList(),
-        onChanged: (value) {
-          setState(() {
-            _selectedBudget = value as String;
-          });
-        },
-        icon: const Icon(
-          Icons.arrow_drop_down_circle,
-          size: 20,
-          color: Colors.deepOrangeAccent,
+    value: _selectedBudget,
+    items: _budgetList
+        .map(
+          (e) => DropdownMenuItem(
+        value: e,
+        child: Text(e),
+      ),
+    )
+        .toList(),
+    onChanged: (value) {
+      setState(() {
+        _selectedBudget = value as String;
+      });
+    },
+    icon: const Icon(
+      Icons.arrow_drop_down_circle,
+      size: 20,
+      color: Colors.deepOrangeAccent,
+    ),
+    dropdownColor: Colors.yellow.shade50,
+    decoration: const InputDecoration(
+      labelText: "Select Budget*",
+      prefixIcon: Icon(
+        Icons.attach_money,
+        color: Colors.deepOrangeAccent,
+      ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(10),
         ),
-        dropdownColor: Colors.yellow.shade50,
-        decoration: const InputDecoration(
-          labelText: "Select Budget*",
-          prefixIcon: Icon(
-            Icons.attach_money,
-            color: Colors.deepOrangeAccent,
-          ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(10),
-            ),
-          ),
-        ),
-      );
+      ),
+    ),
+  );
 
   // email text form field
   Widget _buildEmail() => TextFormField(
-        controller: emailController,
-        autofocus: false,
-        keyboardType: TextInputType.emailAddress,
-        decoration: const InputDecoration(
-          labelText: "Email*",
-          prefixIcon: Icon(
-            Icons.email,
-            color: Colors.deepOrangeAccent,
-          ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(10),
-            ),
-          ),
+    controller: emailController,
+    autofocus: false,
+    keyboardType: TextInputType.emailAddress,
+    decoration: const InputDecoration(
+      labelText: "Email*",
+      prefixIcon: Icon(
+        Icons.email,
+        color: Colors.deepOrangeAccent,
+      ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(10),
         ),
-      );
+      ),
+    ),
+  );
 
   // phone text form field
   Widget _buildPhone() => TextFormField(
-        controller: phoneNoController,
-        autofocus: false,
-        keyboardType: TextInputType.phone,
-        decoration: const InputDecoration(
-          labelText: "Phone*",
-          prefixIcon: Icon(
-            Icons.phone,
-            color: Colors.deepOrangeAccent,
-          ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(10),
-            ),
-          ),
+    controller: phoneNoController,
+    autofocus: false,
+    keyboardType: TextInputType.phone,
+    decoration: const InputDecoration(
+      labelText: "Phone*",
+      prefixIcon: Icon(
+        Icons.phone,
+        color: Colors.deepOrangeAccent,
+      ),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.all(
+          Radius.circular(10),
         ),
-      );
+      ),
+    ),
+  );
 
   // submit button
   Widget _buildSubmit() => SizedBox(
-        width: double.infinity,
-        child: OutlinedButton(
-          style: TextButton.styleFrom(
-            padding: const EdgeInsets.symmetric(vertical: 26),
-            foregroundColor: Colors.yellowAccent,
-            backgroundColor: Colors.yellow[900],
-            elevation: 15,
-            shadowColor: Colors.grey,
-            shape: const StadiumBorder(),
-          ),
-          onPressed: () {
-            // call the submit function here
-            submit();
-            showDialog(
-              context: context,
-              builder: (context) => AlertDialog(
-                title: const Text("Form Submitted"),
-                content: const Text("Thank you for your submission!"),
-                actions: [
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                      // navigate to the survey page
-                      surveyFunction();
-                    },
-                    child: const Text("Close"),
-                  ),
-                ],
+    width: double.infinity,
+    child: OutlinedButton(
+      style: TextButton.styleFrom(
+        padding: const EdgeInsets.symmetric(vertical: 26),
+        foregroundColor: Colors.yellowAccent,
+        backgroundColor: Colors.yellow[900],
+        elevation: 15,
+        shadowColor: Colors.grey,
+        shape: const StadiumBorder(),
+      ),
+      onPressed: () {
+        // call the submit function here
+        submit();
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: const Text("Form Submitted"),
+            content: const Text("Thank you for your submission!"),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                  // navigate to the survey page
+                  surveyFunction();
+                },
+                child: const Text("Close"),
               ),
-            );
-          },
-          child: Text(
-            "Submit Form".toUpperCase(),
-            style: const TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 2,
-              color: Colors.white,
-            ),
+            ],
           ),
+        );
+      },
+      child: Text(
+        "Submit Form".toUpperCase(),
+        style: const TextStyle(
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+          letterSpacing: 2,
+          color: Colors.white,
         ),
-      );
+      ),
+    ),
+  );
 }

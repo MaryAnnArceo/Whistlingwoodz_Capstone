@@ -33,7 +33,7 @@ class LandingPage extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * 0.24,
                     ),
                     const Text(
-                      'WEDDINGS',
+                      '',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 15,
@@ -45,7 +45,7 @@ class LandingPage extends StatelessWidget {
                       height: 10,
                     ),
                     const Text(
-                      'CORPORATE EVENTS',
+                      '',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 15,
@@ -57,7 +57,7 @@ class LandingPage extends StatelessWidget {
                       height: 10,
                     ),
                     const Text(
-                      'AND LIVE CONCERTS',
+                      '',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 15,
@@ -72,7 +72,7 @@ class LandingPage extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'WHISTLINGWOODZ',
+                      '',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 30,

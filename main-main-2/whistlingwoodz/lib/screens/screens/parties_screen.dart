@@ -95,7 +95,11 @@ class _PartyState extends State<PartyForm> {
     "Park Hyatt Melbourne",
     "Hyatt Centric Melbourne",
     "The Langham Melbourne",
-    "Other"
+    "Rajasthan",
+    "Missouri",
+    "Bangalore",
+    "Kerala",
+    "Other",
   ];
   final List<String> _budgetList = [
     r"$20,000 - $29,999",
@@ -120,7 +124,7 @@ class _PartyState extends State<PartyForm> {
         // backgound photo for landing page
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/partyPage.png"),
+            image: AssetImage("assets/images/back2.png"),
             opacity: 0.6,
             fit: BoxFit.cover,
           ),
@@ -330,7 +334,13 @@ class _PartyState extends State<PartyForm> {
             .map(
               (e) => DropdownMenuItem(
                 value: e,
-                child: Text(e),
+              //child: Text(e),
+                child: DropdownButton(
+                  value: _selectedVenue,
+                  items: _venueList.map((value) => DropdownMenuItem(child: Text(value),value: value,)).toList(),
+                  onChanged: (value) {},
+                  menuMaxHeight: 100,
+                ),
               ),
             )
             .toList(),

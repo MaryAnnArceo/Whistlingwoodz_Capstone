@@ -21,7 +21,7 @@ class _MatchMakingState extends State<MatchMaking> {
         // backgound photo for landing page
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/weddingPage.png"),
+            image: AssetImage("assets/images/back2.png"),
             opacity: 0.5,
             fit: BoxFit.cover,
           ),

@@ -97,7 +97,7 @@ class _InquiryFormState extends State<InquiryForm> {
         // backgound photo for landing page
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/twohearts.png"),
+            image: AssetImage("assets/images/back2.png"),
             opacity: 0.6,
             fit: BoxFit.cover,
           ),
