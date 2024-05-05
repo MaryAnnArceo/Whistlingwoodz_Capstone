@@ -36,7 +36,7 @@ class _BottomBarState extends State<BottomBar>
   void initState() {
     super.initState();
     _tabController = TabController(
-      length: 6,
+      length:4 ,
       vsync: this,
     );
     _tabController.addListener(
@@ -53,54 +53,24 @@ class _BottomBarState extends State<BottomBar>
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      decoration: const BoxDecoration(
+        color: Colors.amberAccent,
+      ),
       height: 80,
       child: TabBar(
         controller: _tabController,
         labelColor: bottomNavigationColor,
+
         tabs: const [
-          // Wedding tab
-          Tab(
-            icon: Icon(
-              Icons.people_outlined,
-            ),
-            text: "W",
-          ),
-          // Corporate tab
-          Tab(
-            icon: Icon(
-              Icons.add_business_outlined,
-            ),
-            text: "C",
-          ),
-          // Party tab
-          Tab(
-            icon: Icon(
-              Icons.wine_bar_outlined,
-            ),
-            text: "P",
-          ),
+          // Home tab
+          Tab(icon: Icon(Icons.home,), text: "Home",),
+          // Design tab
+          Tab(icon: Icon(Icons.people_outlined,), text: "Design",),
           // Service tab
-          Tab(
-            icon: Icon(
-              Icons.room_service_outlined,
-            ),
-            text: "S",
-          ),
-          // Match Making tab
-          Tab(
-            icon: Icon(
-              Icons.favorite_border_outlined,
-            ),
-            text: "M",
-          ),
+          Tab(icon: Icon(Icons.room_service_outlined,), text: "Services",),
           // Gallery tab
-          Tab(
-            icon: Icon(
-              Icons.party_mode_outlined,
-            ),
-            text: "G",
-          ),
+          Tab(icon: Icon(Icons.party_mode_outlined,), text: "Gallery",),
         ],
         // event for the bottom navigation bar
         onTap: navigationTapped,
